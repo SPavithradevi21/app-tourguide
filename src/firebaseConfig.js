@@ -1,6 +1,9 @@
+// firebase.js
+
+// Import functions from modular SDK
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getStorage } from "firebase/storage"; // ✅ Add this line
+import { getStorage } from "firebase/storage";
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyB992JLPgS78WyPD0CLam9AbFZ306686yE",
@@ -12,8 +15,10 @@ const firebaseConfig = {
   measurementId: "G-XQG89XPRQF"
 };
 
+// Initialize app
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-const storage = getStorage(app); // ✅ Initialize storage
 
-export { storage }; // ✅ Export it correctly
+// Initialize storage
+const storage = getStorage(app);
+
+export { storage };
